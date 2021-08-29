@@ -1,47 +1,36 @@
-/* eslint-disable no-undef */
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+/* eslint-disable */
+const path = require("path");
 
 const port = process.env.PORT || 3000;
 
 module.exports = {
-  mode: 'development',
-  entry: './index.tsx',
-  output: {
-    filename: 'bundle.[hash].js',
-    publicPath: '/',
-  },
-  devtool: 'inline-source-map',
+  mode: "development",
+  devtool: "inline-source-map",
   module: {
     rules: [
       {
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
-        use: ['ts-loader'],
+        use: ["ts-loader"],
       },
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ['babel-loader'],
+        use: ["babel-loader"],
       },
       {
         test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
-        use: ['file-loader'],
+        use: ["file-loader"],
       },
     ],
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: 'public/index.html',
-    }),
-  ],
   devServer: {
-    host: 'localhost',
+    host: "localhost",
     port: port,
     historyApiFallback: true,
     open: true,
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: [".tsx", ".ts", ".js"],
   },
 };

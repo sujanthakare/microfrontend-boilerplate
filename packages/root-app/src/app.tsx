@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../package-ui-components/button';
+import Button from './ui-components/button';
 
 const App = () => {
   return (
