@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "repository": "git@github.com:sujanthakare/microfrontend-boilerplate.git",
-  "author": "Sujan Thakare <sujandt@gmail.com>",
+  "author": "Sujan Thakare",
   "license": "MIT",
   "scripts": {
     "start": "yarn workspace root-app start",
